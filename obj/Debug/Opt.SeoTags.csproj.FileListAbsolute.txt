@@ -1,0 +1,241 @@
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\ResolveAssemblyReference.cache
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.pdb
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.SeoTags.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.SeoTags.pdb
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Autoroute.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Core.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Framework.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Mvc.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\ClaySharp.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\FluentNHibernate.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.Core.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\log4net.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.DynamicProxy2.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.Linq.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.WebHost.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.Configuration.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Tokens.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Alias.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Iesi.Collections.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.Formatting.dll
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Framework.pdb
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Core.pdb
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Autoroute.pdb
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Mvc.xml
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.xml
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\ClaySharp.pdb
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\FluentNHibernate.xml
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.xml
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.xml
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.Core.xml
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\log4net.xml
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.DynamicProxy2.xml
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.xml
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.WebHost.xml
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Tokens.pdb
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Alias.pdb
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\Iesi.Collections.xml
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.Formatting.xml
+D:\sites\rigmart5\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.SeoTags.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.SeoTags.pdb
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Autoroute.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Core.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Framework.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Mvc.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\FluentNHibernate.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\ClaySharp.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.Core.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\log4net.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.DynamicProxy2.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.Configuration.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.Linq.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.WebHost.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Tokens.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Alias.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Iesi.Collections.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.Formatting.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Framework.pdb
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Core.pdb
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Autoroute.pdb
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Mvc.xml
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\FluentNHibernate.xml
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.xml
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.xml
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\ClaySharp.pdb
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.Core.xml
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.xml
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\log4net.xml
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.xml
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.DynamicProxy2.xml
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.WebHost.xml
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Tokens.pdb
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Alias.pdb
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\Iesi.Collections.xml
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.Formatting.xml
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\ResolveAssemblyReference.cache
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.dll
+D:\sites\rigmart\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.pdb
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.SeoTags.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.SeoTags.pdb
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Autoroute.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Core.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Framework.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\ClaySharp.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\FluentNHibernate.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\log4net.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.Core.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.DynamicProxy2.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.Linq.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.Configuration.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.WebHost.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Tokens.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Alias.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Iesi.Collections.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.Formatting.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Framework.pdb
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Core.pdb
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Autoroute.pdb
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\ClaySharp.pdb
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\FluentNHibernate.xml
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.xml
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\log4net.xml
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.Core.xml
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.xml
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.xml
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.xml
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.DynamicProxy2.xml
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.WebHost.xml
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Tokens.pdb
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Alias.pdb
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Iesi.Collections.xml
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.Formatting.xml
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.csprojResolveAssemblyReference.cache
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.pdb
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.Common.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Widgets.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Scripting.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Themes.dll
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.Common.pdb
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Widgets.pdb
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Scripting.pdb
+D:\sites\orchard sites\labazanov2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Themes.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.SeoTags.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.SeoTags.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.Common.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Autoroute.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Core.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Framework.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\ClaySharp.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\FluentNHibernate.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\log4net.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.Core.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.DynamicProxy2.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.Linq.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.Configuration.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.WebHost.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Widgets.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Tokens.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Alias.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Iesi.Collections.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.Formatting.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Scripting.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Themes.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Framework.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Core.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.Common.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Autoroute.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\ClaySharp.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\FluentNHibernate.xml
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.xml
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\log4net.xml
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.Core.xml
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.xml
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.xml
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.DynamicProxy2.xml
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.WebHost.xml
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Widgets.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Tokens.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Alias.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Iesi.Collections.xml
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.Formatting.xml
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Scripting.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Themes.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.csprojResolveAssemblyReference.cache
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.pdb
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\WebAdvanced.Sitemap.dll
+D:\sites\orchard sites\rigmart.ru\src\Orchard.Web\Modules\Opt.SeoTags\bin\WebAdvanced.Sitemap.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.csprojResolveAssemblyReference.cache
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\obj\Debug\Opt.SeoTags.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.SeoTags.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Opt.SeoTags.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Alias.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Autoroute.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Core.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Framework.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\WebAdvanced.Sitemap.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\FluentNHibernate.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.Core.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\log4net.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.DynamicProxy2.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Newtonsoft.Json.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.Linq.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.Configuration.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.WebHost.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.SqlAzure.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Widgets.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\ClaySharp.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Tokens.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Iesi.Collections.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.Formatting.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Scripting.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Themes.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Framework.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Core.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Alias.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Autoroute.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\WebAdvanced.Sitemap.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\FluentNHibernate.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.Core.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\log4net.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Castle.DynamicProxy2.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Newtonsoft.Json.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.Configuration.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Autofac.Configuration.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Web.Http.WebHost.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\NHibernate.SqlAzure.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Widgets.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Tokens.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Iesi.Collections.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.Formatting.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Scripting.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\Orchard.Themes.pdb
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\System.Net.Http.xml
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\MainBit.Common.dll
+D:\sites\orchard sites\123\orchard17-new-2\src\Orchard.Web\Modules\Opt.SeoTags\bin\MainBit.Common.pdb
