@@ -6,7 +6,7 @@ using System.Security;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MainBit.Common")]
+[assembly: AssemblyTitle("MainBit.SeoTags")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyProduct("Orchard")]
@@ -20,7 +20,7 @@ using System.Security;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4bb7b671-d8f1-4343-ac6b-cf4c00eaf520")]
+[assembly: Guid("85696d36-6fd9-4285-bdf7-d24e8d8885d5")]
 
 // Version information for an assembly consists of the following four values:
 //

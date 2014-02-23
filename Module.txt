@@ -1,11 +1,11 @@
-﻿Name: MainBit.Common
+﻿Name: MainBit.SeoTags
 AntiForgery: enabled
-Author: netp9c
+Author: neTp9c
 Website: http://mainbit.com
 Version: 1.0
 OrchardVersion: 1.7
-Description: Description for the module
+Category: SEO
 Features:
-    MainBit.Common:
-        Description: Description for feature MainBit.Common.
-		Dependencies: Orchard.Widgets
+    MainBit.SeoTags:
+        Description: SEO Tags for content items
+		Dependencies: MainBit.Common, WebAdvanced.Sitemap, Orchard.Alias

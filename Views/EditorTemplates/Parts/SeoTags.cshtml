@@ -1,0 +1,43 @@
+﻿@model MainBit.SeoTags.Models.SeoTagsPart
+@using Orchard.Utility.Extensions;           
+
+<fieldset>
+    <legend>@T("SEO Meta Data")</legend>
+        
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Title)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.Title, new { @class = "large text" })
+        @Html.ValidationMessageFor(model => model.Title)
+    </div>
+        
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Keywords)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.Keywords, new { @class = "large text" })
+        @Html.ValidationMessageFor(model => model.Keywords)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Description)
+    </div>
+    <div class="editor-field">
+        @Html.TextAreaFor(model => model.Description)
+        @Html.ValidationMessageFor(model => model.Description)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Canonical)
+    </div>
+    <div class="editor-field">
+        <table>
+            <tr>
+                <td>@ViewContext.RequestContext.HttpContext.Request.ToApplicationRootUrlString()/ </td>
+                <td style="width:100%">@Html.TextBoxFor(model => model.Canonical, new { @class = "large text" })</td>
+            </tr>
+        </table>
+        @Html.ValidationMessageFor(model => model.Canonical)
+    </div>
+</fieldset>

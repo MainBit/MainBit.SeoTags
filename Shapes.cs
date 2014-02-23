@@ -1,61 +1,36 @@
-﻿using Orchard;
-using Orchard.Core.Containers.Models;
+﻿using Orchard.ContentManagement;
+using Orchard.ContentManagement.Aspects;
 using Orchard.DisplayManagement.Descriptors;
-using System;
+using MainBit.Common.Services;
+using MainBit.SeoTags.Models;
+using MainBit.SeoTags.Services;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using Orchard.Environment;
 
-namespace MainBit.Common
-{
-    public class Shapes : IShapeTableProvider 
-    {
-        private readonly IWorkContextAccessor _workContextAccessor;
+namespace MainBit.SeoTags {
+    public class Shapes : IShapeTableProvider {
+        private readonly Work<ICurrentContentAccessor> _currentContentAccessor;
 
-        public Shapes(IWorkContextAccessor workContextAccessor)
-		{
-			_workContextAccessor = workContextAccessor;
-		}
+        public Shapes(Work<ICurrentContentAccessor> currentContentAccessor)
+        {
+            _currentContentAccessor = currentContentAccessor;
+        }
 
-		#region Implementation of IShapeTableProvider
-
-		public void Discover(ShapeTableBuilder builder)
-		{
-            builder.Describe("Parts_Container_Contained")
-				.OnDisplaying(displaying =>
-								{
-                                    var part = displaying.Shape.ContentPart as ContainerPart;
-                                    if (part != null)
-									{
-                                        if (!String.IsNullOrWhiteSpace(part.ItemContentType))
-                                        {
-                                            displaying.ShapeMetadata.Alternates.Add("Parts_Container_Contained_" + part.ItemContentType);
-                                            displaying.ShapeMetadata.Alternates.Add("Parts_Container_Contained_" + part.ItemContentType + "__" + displaying.ShapeMetadata.DisplayType);
-										}
-									}
-								});
-            //это почему-то не работает
-            builder.Describe("Style")
-                .OnDisplaying(displaying =>
-                {
-                    var resource = displaying.Shape;
-                    resource.url = resource.Url.ToLower();
-                });
-            builder.Describe("Style__site")
-                .OnDisplaying(displaying =>
-                {
-                    var resource = displaying.Shape;
-                    resource.Url = resource.Url.ToLower();
-                });
-            builder.Describe("Style_ie")
-                .OnDisplaying(displaying =>
-                {
-                    var resource = displaying.Shape;
-                    resource.Url = resource.Url.ToLower();
+        public void Discover(ShapeTableBuilder builder) {
+            builder.Describe("Pager")
+                .OnDisplaying(displaying => {
+                    //_seoTagsService.RegisterRelForList(displaying.Shape.Page, displaying.Shape.PageSize, displaying.Shape.TotalItemCount, "");
                 });
 
-		}
-
-		#endregion
-	}
+            builder.Describe("Layout")
+                .OnDisplaying(displaying =>
+                {
+                    var seoTagsPart = _currentContentAccessor.Value.CurrentContentItem.As<SeoTagsPart>();
+                    if (seoTagsPart != null && string.IsNullOrEmpty(seoTagsPart.Title) == false)
+                    {
+                        displaying.Shape.Title = seoTagsPart.Title;
+                    }
+                });
+        }
+    }
 }
