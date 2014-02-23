@@ -6,12 +6,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7DE3829F-C224-419C-8DD9-ADB5B7FB1290}</ProjectGuid>
+    <ProjectGuid>{3FC89605-8AA6-4E24-B954-F954DE7D3C6D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MainBit.SeoTags</RootNamespace>
-    <AssemblyName>MainBit.SeoTags</AssemblyName>
+    <RootNamespace>MainBit.Common</RootNamespace>
+    <AssemblyName>MainBit.Common</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <FileUpgradeFlags>
@@ -35,6 +35,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -73,6 +74,8 @@
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="Views\Web.config" />
+    <Content Include="Scripts\Web.config" />
+    <Content Include="Styles\Web.config" />
     <Content Include="Properties\AssemblyInfo.cs" />
     <Content Include="Module.txt" />
   </ItemGroup>
@@ -87,13 +90,8 @@
       <Name>Orchard.Core</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\MainBit.Common\MainBit.Common.csproj">
-      <Project>{3fc89605-8aa6-4e24-b954-f954de7d3c6d}</Project>
-      <Name>MainBit.Common</Name>
-      <Private>False</Private>
-    </ProjectReference>
     <ProjectReference Include="..\Orchard.Alias\Orchard.Alias.csproj">
-      <Project>{475b6c45-b27c-438b-8966-908b9d6d1077}</Project>
+      <Project>{475B6C45-B27C-438B-8966-908B9D6D1077}</Project>
       <Name>Orchard.Alias</Name>
       <Private>False</Private>
     </ProjectReference>
@@ -102,32 +100,32 @@
       <Name>Orchard.Autoroute</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\WebAdvanced.Sitemap\WebAdvanced.Sitemap.csproj">
-      <Project>{83c6a228-b496-4206-a593-d0b46fc9aa7d}</Project>
-      <Name>WebAdvanced.Sitemap</Name>
+    <ProjectReference Include="..\Orchard.Fields\Orchard.Fields.csproj">
+      <Project>{3787DDE5-E5C8-4841-BDA7-DCB325388064}</Project>
+      <Name>Orchard.Fields</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.Widgets\Orchard.Widgets.csproj">
+      <Project>{194D3CCC-1153-474D-8176-FDE8D7D0D0BD}</Project>
+      <Name>Orchard.Widgets</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Drivers\SeoTagsPartDriver.cs" />
-    <Compile Include="Handlers\SeoTagsPartHandler.cs" />
-    <Compile Include="Migrations.cs" />
-    <Compile Include="Models\SeoTagsPart.cs" />
-    <Compile Include="Models\SeoTagsPartRecord.cs" />
-    <Compile Include="Services\ISeoTagsService.cs" />
-    <Compile Include="Services\SeoTagsService.cs" />
+    <Compile Include="Descriptors\ShapePlacementStrategy\ShapePlacementParsingStrategy.cs" />
+    <Compile Include="Extensions\DynamicZoneExtensions.cs" />
+    <Compile Include="Extensions\PartsExtension.cs" />
+    <Compile Include="Extensions\FieldsExtensions.cs" />
+    <Compile Include="Extensions\SerializationExtensions.cs" />
+    <Compile Include="Extensions\UrlExtensions.cs" />
+    <Compile Include="Filter.cs" />
+    <Compile Include="Routing\LowercaseRouting.cs" />
+    <Compile Include="RuleEngine\PartRuleProvider.cs" />
+    <Compile Include="Services\CurrentContentAccessor.cs" />
     <Compile Include="Shapes.cs" />
-    <Compile Include="Sitemap\CanonicalSitemapRouteFilter.cs" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Content Include="Views\EditorTemplates\Parts\SeoTags.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Data\Localization\ru-RU\orchard.module.po" />
-    <None Include="placement.info">
-      <SubType>Designer</SubType>
-    </None>
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
