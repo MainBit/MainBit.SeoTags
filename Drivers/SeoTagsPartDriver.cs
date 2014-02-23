@@ -33,6 +33,7 @@ namespace MainBit.SeoTags.Drivers
 
         protected override DriverResult Display(SeoTagsPart part, string displayType, dynamic shapeHelper)
         {
+            if (displayType != "Detail") { return null; }
             if (_currentContentAccessor.CurrentContentItem.Id != part.ContentItem.Id) { return null; }
             var noindex = false;
             var pageKey = "page";
