@@ -6,26 +6,26 @@ namespace MainBit.SeoTags.Models
     {
         public string Title
         {
-            get { return Record.Title; }
-            set { Record.Title = value; }
+            get { return Retrieve(x => x.Title); }
+            set { Store(x => x.Title, value); }
         }
 
         public string Keywords
         {
-            get { return Record.Keywords; }
-            set { Record.Keywords = value; }
+            get { return Retrieve(x => x.Keywords); }
+            set { Store(r => r.Keywords, value); }
         }
 
         public string Description
         {
-            get { return Record.Description; }
-            set { Record.Description = value; }
+            get { return Retrieve(x => x.Description); }
+            set { Store(x => x.Description, value); }
         }
 
         public string Canonical
         {
-            get { return Record.Canonical; }
-            set { Record.Canonical = value; }
+            get { return Retrieve(x => x.Canonical); }
+            set { Store(x => x.Canonical, value); }
         }
     }
 }

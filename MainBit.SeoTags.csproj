@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MainBit.SeoTags</RootNamespace>
     <AssemblyName>MainBit.SeoTags</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -62,6 +62,7 @@
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\lib\aspnetmvc\System.Web.Mvc.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -102,6 +103,11 @@
       <Name>Orchard.Autoroute</Name>
       <Private>False</Private>
     </ProjectReference>
+    <ProjectReference Include="..\Upgrade\Upgrade.csproj">
+      <Project>{8a9fdb57-342d-49c2-bafc-d885aae5cc7c}</Project>
+      <Name>Upgrade</Name>
+      <Private>False</Private>
+    </ProjectReference>
     <ProjectReference Include="..\WebAdvanced.Sitemap\WebAdvanced.Sitemap.csproj">
       <Project>{83c6a228-b496-4206-a593-d0b46fc9aa7d}</Project>
       <Name>WebAdvanced.Sitemap</Name>
@@ -109,9 +115,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\InfosetController.cs" />
     <Compile Include="Drivers\SeoTagsPartDriver.cs" />
     <Compile Include="Handlers\SeoTagsPartHandler.cs" />
-    <Compile Include="Migrations.cs" />
     <Compile Include="Models\SeoTagsPart.cs" />
     <Compile Include="Models\SeoTagsPartRecord.cs" />
     <Compile Include="Services\ISeoTagsService.cs" />

@@ -3,9 +3,9 @@ AntiForgery: enabled
 Author: neTp9c
 Website: http://mainbit.com
 Version: 1.0
-OrchardVersion: 1.7
+OrchardVersion: 1.8
 Category: SEO
 Features:
     MainBit.SeoTags:
         Description: SEO Tags for content items
-		Dependencies: MainBit.Common, WebAdvanced.Sitemap, Orchard.Alias
+		Dependencies: MainBit.Common, Orchard.Alias, WebAdvanced.Sitemap
