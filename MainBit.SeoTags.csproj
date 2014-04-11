@@ -118,6 +118,7 @@
     <Compile Include="Controllers\InfosetController.cs" />
     <Compile Include="Drivers\SeoTagsPartDriver.cs" />
     <Compile Include="Handlers\SeoTagsPartHandler.cs" />
+    <Compile Include="Migrations.cs" />
     <Compile Include="Models\SeoTagsPart.cs" />
     <Compile Include="Models\SeoTagsPartRecord.cs" />
     <Compile Include="Services\ISeoTagsService.cs" />

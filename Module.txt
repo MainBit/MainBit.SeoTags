@@ -7,5 +7,5 @@ OrchardVersion: 1.8
 Category: SEO
 Features:
     MainBit.SeoTags:
-        Description: SEO Tags for content items
-		Dependencies: MainBit.Common, Orchard.Alias, WebAdvanced.Sitemap
+        Description: Title, Keywords, Description, Canonical, Pagging.
+	Dependencies: MainBit.Common, Orchard.Alias, WebAdvanced.Sitemap
