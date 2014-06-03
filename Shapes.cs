@@ -30,6 +30,15 @@ namespace MainBit.SeoTags {
                     {
                         displaying.Shape.Title = seoTagsPart.Title;
                     }
+                    else
+                    {
+                        var titleAspect = _currentContentAccessor.Value.CurrentContentItem.As<ITitleAspect>();
+                        if (titleAspect != null && string.IsNullOrEmpty(titleAspect.Title) == false)
+                        {
+                            displaying.Shape.Title = titleAspect.Title;
+                        }
+                    }
+                    
                 });
         }
     }
