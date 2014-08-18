@@ -1,5 +1,4 @@
-﻿Name: MainBit.SeoTags
-AntiForgery: enabled
+﻿AntiForgery: enabled
 Author: neTp9c
 Website: http://mainbit.com
 Version: 1.0
@@ -7,5 +6,6 @@ OrchardVersion: 1.8
 Category: SEO
 Features:
     MainBit.SeoTags:
-        Description: Title, Keywords, Description, Canonical, Pagging.
-	Dependencies: MainBit.Common, Orchard.Alias, WebAdvanced.Sitemap
+		Name: MainBit.SeoTags
+		Description: Title, Keywords, Description, Canonical, Pagging.
+		Dependencies: MainBit.Common, Orchard.Alias, WebAdvanced.Sitemap
