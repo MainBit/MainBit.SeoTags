@@ -12,7 +12,8 @@ using Orchard.Localization;
 
 namespace MainBit.SeoTags.Services
 {
-    public class SeoTagsService : ISeoTagsService {
+    public class SeoTagsService : ISeoTagsService
+    {
 
         private readonly Work<WorkContext> _workContext;
         private readonly IResourceManager _resourceManager;
@@ -33,12 +34,15 @@ namespace MainBit.SeoTags.Services
         public Localizer T { get; set; }
 
 
-        public void RegisterRelForList(
+        public void RegisterMetaForList(
             int Page,
             int PageSize,
             double TotalItemCount,
             string PagerId)
         {
+
+            #region prepare
+
             var currentPage = Page < 1 ? 1 : Page;
 
             var pageSize = PageSize;
@@ -50,49 +54,36 @@ namespace MainBit.SeoTags.Services
             var routeData = _workContext.Value.HttpContext.Request.RequestContext.RouteData.Values;
             var queryString = _workContext.Value.HttpContext.Request.QueryString;
 
-            
-
-            if (queryString != null)
-            {
-                foreach (var key in from string key in queryString.Keys where key != null && !routeData.ContainsKey(key) let value = queryString[key] select key)
-                {
-                    routeData[key] = queryString[key];
-                }
-            }
-
-            // HACK: MVC 3 is adding a specific value in System.Web.Mvc.Html.ChildActionExtensions.ActionHelper
-            // when a content item is set as home page, it is rendered by using Html.RenderAction, and the routeData is altered
-            // This code removes this extra route value
-            var removedKeys = routeData.Keys.Where(key => routeData[key] is DictionaryValueProvider<object>).ToList();
-            foreach (var key in removedKeys)
-            {
-                routeData.Remove(key);
-            }
-
             var pageKey = String.IsNullOrEmpty(PagerId) ? "page" : PagerId;
 
+            #endregion
+
             var canonical = _resourceManager.GetRegisteredLinks().FirstOrDefault(p => p.Rel == "canonical");
-            if (canonical == null) {
+            if (canonical == null)
+            {
                 return;
             }
             var canonicalUrl = canonical.Href;
-            
+
             if (queryString == null || queryString.Count == 0 || (queryString.Count == 1 && queryString[pageKey] != null))
             {
                 // rel canonical
                 // можно закоментаровать, так как на avito.ru все укакзывает на первую страницу
-                if (currentPage > 1) {
+                if (currentPage > 1)
+                {
                     canonical.Href = AddKeyToUrl(canonicalUrl, pageKey, currentPage);
                 }
 
                 // rel prev
-                if (currentPage > 1) {
+                if (currentPage > 1)
+                {
                     string prevUrl;
                     if (currentPage == 2)
                     {
                         prevUrl = canonicalUrl;
                     }
-                    else {
+                    else
+                    {
                         prevUrl = AddKeyToUrl(canonicalUrl, pageKey, currentPage - 1);
                     }
                     _resourceManager.RegisterLink(new LinkEntry()
@@ -112,7 +103,8 @@ namespace MainBit.SeoTags.Services
                     });
                 }
             }
-            else {
+            else
+            {
                 // rel next
                 // здесь всегда добавляется next, даже если второй страницы не существует
                 _resourceManager.RegisterLink(new LinkEntry()
@@ -125,7 +117,8 @@ namespace MainBit.SeoTags.Services
             //var appPath = _workContext.Value.HttpContext.Request.ToApplicationRootUrlString();
         }
 
-        private string AddKeyToUrl(string url, string key, int value) {
+        private string AddKeyToUrl(string url, string key, int value)
+        {
             if (url.IndexOf('?') >= 0)
             {
                 url += "&" + key + "=" + value;
@@ -137,13 +130,8 @@ namespace MainBit.SeoTags.Services
             return url;
         }
 
-        public void ChangeMetaForList(int Page)
-        {
-            var currentPage = Page < 1 ? 1 : Page;
 
-        }
-
-        public string ChangeTitle(string title)
+        public string GetTitle(string title)
         {
             var pageKey = "page";
             var queryString = _workContext.Value.HttpContext.Request.QueryString;
@@ -154,7 +142,7 @@ namespace MainBit.SeoTags.Services
             }
             else
             {
-                return string.Format(T("{0} Page {1}").ToString(), title, currentPage);
+                return string.Format(T("{0} - Page {1}").ToString(), title, currentPage);
             }
         }
     }

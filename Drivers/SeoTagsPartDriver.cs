@@ -9,6 +9,7 @@ using Orchard.UI.Resources;
 using Orchard.Utility.Extensions;
 using System;
 using System.Linq;
+using MainBit.SeoTags.Settings;
 
 namespace MainBit.SeoTags.Drivers
 {
@@ -35,6 +36,8 @@ namespace MainBit.SeoTags.Drivers
         {
             if (displayType != "Detail") { return null; }
             if (_currentContentAccessor.CurrentContentItem.Id != part.ContentItem.Id) { return null; }
+
+            var settings = part.TypePartDefinition.GetSeoTagsPartSettings();
             var noindex = false;
             var pageKey = "page";
             var queryString = _wca.GetContext().HttpContext.Request.QueryString;
@@ -69,8 +72,9 @@ namespace MainBit.SeoTags.Drivers
                 _resourceManager.SetMeta(new MetaEntry
                 {
                     Name = "description",
-                    Content = part.Description
-                    //Content = currentPage > 1 ?  string.Format(T("{0} Page {1}").ToString(), part.Description, currentPage) : part.Description
+                    Content = settings.AddPageToTitle && currentPage > 1
+                        ? string.Format(T("{0} Page {1}").ToString(), part.Description, currentPage)
+                        : part.Description
                 });
             }
             if (!String.IsNullOrWhiteSpace(part.Keywords))
@@ -78,8 +82,10 @@ namespace MainBit.SeoTags.Drivers
                 _resourceManager.SetMeta(new MetaEntry
                 {
                     Name = "keywords",
-                    Content = part.Keywords
-                    //Content = currentPage > 1 ? string.Format(T("{0}, Page {1}").ToString(), part.Keywords, currentPage) : part.Keywords
+                    Content = part.Keywords,
+                    //Content = settings.AddPageToTitle && currentPage > 1
+                    //    ? string.Format(T("{0} - Page {1}").ToString(), part.Keywords, currentPage)
+                    //    : part.Keywords
                 });
             }
 
@@ -125,6 +131,12 @@ namespace MainBit.SeoTags.Drivers
         protected override DriverResult Editor(SeoTagsPart part, IUpdateModel updater, dynamic shapeHelper)
         {
             updater.TryUpdateModel(part, Prefix, null, null);
+
+            part.Title = part.Title.Trim();
+            part.Description = part.Description.Trim();
+            part.Keywords = part.Keywords.Trim();
+            part.Canonical = part.Canonical.Trim();
+
             return Editor(part, shapeHelper);
         }
 

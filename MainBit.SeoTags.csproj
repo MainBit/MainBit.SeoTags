@@ -123,6 +123,8 @@
     <Compile Include="Models\SeoTagsPartRecord.cs" />
     <Compile Include="Services\ISeoTagsService.cs" />
     <Compile Include="Services\SeoTagsService.cs" />
+    <Compile Include="Settings\SeoTagsPartSettings.cs" />
+    <Compile Include="Settings\SeoTagsPartSettingsEvents.cs" />
     <Compile Include="Shapes.cs" />
     <Compile Include="Sitemap\CanonicalSitemapRouteFilter.cs" />
   </ItemGroup>
@@ -135,6 +137,7 @@
     <None Include="placement.info">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Views\DefinitionTemplates\SeoTagsPartSettings.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
