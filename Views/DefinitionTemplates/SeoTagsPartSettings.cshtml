@@ -2,8 +2,16 @@
 
 <fieldset>
     <div>
+        @Html.EditorFor(m => m.UseTypePartDefSettings)
+        <label class="forcheckbox" for="@Html.FieldIdFor(m => m.UseTypePartDefSettings)">@T("Use Content Type Part Definition Settings")</label>
+    </div>
+    <div>
         @Html.EditorFor(m => m.AddPageToTitle)
         <label class="forcheckbox" for="@Html.FieldIdFor(m => m.AddPageToTitle)">@T("Add page number to title and description meta tags")</label>
+    </div>
+    <div>
+        @Html.EditorFor(m => m.FirstPageCanonical)
+        <label class="forcheckbox" for="@Html.FieldIdFor(m => m.FirstPageCanonical)">@T("Add canonical rel link that always point to first page")</label>
     </div>
 </fieldset>
 

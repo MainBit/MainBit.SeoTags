@@ -5,10 +5,10 @@ namespace MainBit.SeoTags.Services
     public interface ISeoTagsService : IDependency
     {
         void RegisterMetaForList(
-            int Page,
-            int PageSize,
-            double TotalItemCount,
-            string PagerId);
+            int page,
+            int pageSize,
+            double totalItemCount,
+            string pagerId);
 
         string GetTitle(string title);
     }

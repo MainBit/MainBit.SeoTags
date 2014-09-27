@@ -5,10 +5,15 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Orchard;
+using Orchard.ContentManagement;
 using Orchard.Environment;
 using Orchard.UI.Resources;
 using Orchard.Utility.Extensions;
 using Orchard.Localization;
+using MainBit.Common.Services;
+using MainBit.SeoTags.Models;
+using MainBit.SeoTags.Settings;
+
 
 namespace MainBit.SeoTags.Services
 {
@@ -18,15 +23,18 @@ namespace MainBit.SeoTags.Services
         private readonly Work<WorkContext> _workContext;
         private readonly IResourceManager _resourceManager;
         private readonly UrlHelper _urlHelper;
+        private readonly ICurrentContentAccessor _currentContentAccessor;
 
         public SeoTagsService(
             Work<WorkContext> workContext,
             IResourceManager resourceManager,
-            UrlHelper urlHelper)
+            UrlHelper urlHelper,
+            ICurrentContentAccessor currentContentAccessor)
         {
             _workContext = workContext;
             _resourceManager = resourceManager;
             _urlHelper = urlHelper;
+            _currentContentAccessor = currentContentAccessor;
 
             T = NullLocalizer.Instance;
         }
@@ -35,26 +43,37 @@ namespace MainBit.SeoTags.Services
 
 
         public void RegisterMetaForList(
-            int Page,
-            int PageSize,
-            double TotalItemCount,
+            int page,
+            int pageSize,
+            double totalItemCount,
             string PagerId)
         {
 
             #region prepare
 
-            var currentPage = Page < 1 ? 1 : Page;
+            var currentPage = page < 1 ? 1 : page;
 
-            var pageSize = PageSize;
             if (pageSize < 1)
                 pageSize = _workContext.Value.CurrentSite.PageSize;
 
-            var totalPageCount = (int)Math.Ceiling(TotalItemCount / pageSize);
+            var totalPageCount = (int)Math.Ceiling(totalItemCount / pageSize);
 
             var routeData = _workContext.Value.HttpContext.Request.RequestContext.RouteData.Values;
             var queryString = _workContext.Value.HttpContext.Request.QueryString;
 
             var pageKey = String.IsNullOrEmpty(PagerId) ? "page" : PagerId;
+
+            var contentItem = _currentContentAccessor.CurrentContentItem;
+            SeoTagsPart seoTagsPart = null;
+            SeoTagsPartSettings settings = null;
+            if (contentItem != null)
+            {
+                seoTagsPart = contentItem.As<SeoTagsPart>();
+                if (seoTagsPart != null)
+                {
+                    settings = seoTagsPart.TypePartDefinition.GetSeoTagsPartSettings();
+                }
+            }
 
             #endregion
 
@@ -69,7 +88,7 @@ namespace MainBit.SeoTags.Services
             {
                 // rel canonical
                 // можно закоментаровать, так как на avito.ru все укакзывает на первую страницу
-                if (currentPage > 1)
+                if (currentPage > 1 && (settings == null || !settings.FirstPageCanonical))
                 {
                     canonical.Href = AddKeyToUrl(canonicalUrl, pageKey, currentPage);
                 }
