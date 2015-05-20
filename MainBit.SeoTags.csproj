@@ -88,6 +88,10 @@
       <Name>Orchard.Core</Name>
       <Private>False</Private>
     </ProjectReference>
+    <ProjectReference Include="..\MainBit.Common\MainBit.Common.csproj">
+      <Project>{3fc89605-8aa6-4e24-b954-f954de7d3c6d}</Project>
+      <Name>MainBit.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Orchard.Alias\Orchard.Alias.csproj">
       <Project>{475b6c45-b27c-438b-8966-908b9d6d1077}</Project>
       <Name>Orchard.Alias</Name>

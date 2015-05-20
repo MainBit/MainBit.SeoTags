@@ -34,8 +34,8 @@ namespace MainBit.SeoTags
                     _seoTagsService.RegisterMetaForList(displaying.Shape.Page, displaying.Shape.PageSize, displaying.Shape.TotalItemCount, "");
                 });
 
-            builder.Describe("Layout")
-                .OnDisplaying(displaying =>
+            builder.Describe("Parts_Title")
+                .OnDisplayed(displayed =>
                 {
                     var seoTagsPart = _currentContentAccessor.Value.CurrentContentItem.As<SeoTagsPart>();
                     if (seoTagsPart == null) { return; }
@@ -43,23 +43,51 @@ namespace MainBit.SeoTags
 
                     if (seoTagsPart != null && string.IsNullOrEmpty(seoTagsPart.Title) == false)
                     {
-                        displaying.Shape.Title = seoTagsPart.Title;
+                        _wca.GetContext().Layout.Title = seoTagsPart.Title;
                     }
                     else
                     {
                         var titleAspect = _currentContentAccessor.Value.CurrentContentItem.As<ITitleAspect>();
                         if (titleAspect != null && string.IsNullOrEmpty(titleAspect.Title) == false)
                         {
-                            displaying.Shape.Title = titleAspect.Title;
+                            _wca.GetContext().Layout.Title = titleAspect.Title;
                         }
                     }
 
                     if (settings.AddPageToTitle)
                     {
                         var _seoTagsService = _wca.GetContext().Resolve<ISeoTagsService>();
-                        displaying.Shape.Title = _seoTagsService.GetTitle(displaying.Shape.Title);
+                        _wca.GetContext().Layout.Title = _seoTagsService.GetTitle(_wca.GetContext().Layout.Title);
                     }
                 });
+
+            // after that will call displaying title part
+            //builder.Describe("Layout")
+            //    .OnDisplaying(displaying =>
+            //    {
+            //        var seoTagsPart = _currentContentAccessor.Value.CurrentContentItem.As<SeoTagsPart>();
+            //        if (seoTagsPart == null) { return; }
+            //        var settings = seoTagsPart.TypePartDefinition.GetSeoTagsPartSettings();
+
+            //        if (seoTagsPart != null && string.IsNullOrEmpty(seoTagsPart.Title) == false)
+            //        {
+            //            displaying.Shape.Title = seoTagsPart.Title;
+            //        }
+            //        else
+            //        {
+            //            var titleAspect = _currentContentAccessor.Value.CurrentContentItem.As<ITitleAspect>();
+            //            if (titleAspect != null && string.IsNullOrEmpty(titleAspect.Title) == false)
+            //            {
+            //                displaying.Shape.Title = titleAspect.Title;
+            //            }
+            //        }
+
+            //        if (settings.AddPageToTitle)
+            //        {
+            //            var _seoTagsService = _wca.GetContext().Resolve<ISeoTagsService>();
+            //            displaying.Shape.Title = _seoTagsService.GetTitle(displaying.Shape.Title);
+            //        }
+            //    });
         }
     }
 }
