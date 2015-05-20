@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MainBit.SeoTags.Models
 {
-    public class SeoTagsPartRecord : ContentPartRecord 
+    public class SeoTagsPartRecord : ContentPartRecord
     {
         [StringLength(2048)]
         public virtual string Title { get; set; }
