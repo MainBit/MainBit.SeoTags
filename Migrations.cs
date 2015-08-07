@@ -20,7 +20,7 @@ namespace MainBit.SeoTags {
                 table => table
                     .ContentPartRecord()
                         .Column<string>("Title", c => c.WithLength(2048))
-                        .Column<bool>("Keywords", c => c.WithDefault(2048))
+                        .Column<string>("Keywords", c => c.WithDefault(2048))
                         .Column<string>("Description", c => c.WithLength(2048))
                         .Column<string>("Canonical", c => c.WithLength(2048)));
 
