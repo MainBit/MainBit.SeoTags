@@ -7,11 +7,10 @@
     </div>
     <div>
         @Html.EditorFor(m => m.AddPageToTitle)
-        <label class="forcheckbox" for="@Html.FieldIdFor(m => m.AddPageToTitle)">@T("Add page number to title and description meta tags")</label>
+        <label class="forcheckbox" for="@Html.FieldIdFor(m => m.AddPageToTitle)">@T("Add a page number to the title and the description meta tags")</label>
     </div>
     <div>
         @Html.EditorFor(m => m.FirstPageCanonical)
-        <label class="forcheckbox" for="@Html.FieldIdFor(m => m.FirstPageCanonical)">@T("Add canonical rel link that always point to first page")</label>
+        <label class="forcheckbox" for="@Html.FieldIdFor(m => m.FirstPageCanonical)">@T("Add a canonical rel link that always points to the first page")</label>
     </div>
 </fieldset>
-

@@ -1,8 +1,8 @@
 ﻿using MainBit.SeoTags.Models;
-using Orchard.Alias;
 using Orchard.Autoroute.Models;
 using Orchard.ContentManagement;
 using Orchard.Data;
+using Orchard.Environment.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,16 +12,14 @@ using WebAdvanced.Sitemap.Services;
 
 namespace MainBit.SeoTags.Sitemap
 {
+    [OrchardFeature("MainBit.SeoTags.Sitemap")]
     public class CanonicalSitemapRouteFilter : ISitemapRouteFilter
     {
-        private readonly IAliasService _aliasService;
         private readonly IContentManager _contentManager;
 
         public CanonicalSitemapRouteFilter(
-            IAliasService aliasService,
             IContentManager contentManager)
         {
-            _aliasService = aliasService;
             _contentManager = contentManager;
         }
 

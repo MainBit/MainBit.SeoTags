@@ -1,7 +1,7 @@
 ﻿using Orchard.ContentManagement;
 using Orchard.ContentManagement.Aspects;
 using Orchard.DisplayManagement.Descriptors;
-using MainBit.Common.Services;
+using MainBit.Utility.Services;
 using MainBit.SeoTags.Models;
 using MainBit.SeoTags.Services;
 using System.Collections.Generic;
@@ -14,13 +14,13 @@ namespace MainBit.SeoTags
     public class Shapes : IShapeTableProvider
     {
         private readonly Work<ICurrentContentAccessor> _currentContentAccessor;
-        private readonly IWorkContextAccessor _wca;
+        private readonly Work<ISeoTagsService> _seoTagsService;
 
         public Shapes(Work<ICurrentContentAccessor> currentContentAccessor,
-            IWorkContextAccessor wca)
+            Work<ISeoTagsService> seoTagsService)
         {
             _currentContentAccessor = currentContentAccessor;
-            _wca = wca;
+            _seoTagsService = seoTagsService;
         }
 
         public void Discover(ShapeTableBuilder builder)
@@ -28,66 +28,10 @@ namespace MainBit.SeoTags
 
 
             builder.Describe("Pager")
-                .OnDisplaying(displaying =>
+                .OnDisplayed(displaying =>
                 {
-                    var _seoTagsService = _wca.GetContext().Resolve<ISeoTagsService>();
-                    _seoTagsService.RegisterMetaForList(displaying.Shape.Page, displaying.Shape.PageSize, displaying.Shape.TotalItemCount, "");
+                    _seoTagsService.Value.RegisterMetaForList(displaying.Shape.Page, displaying.Shape.PageSize, displaying.Shape.TotalItemCount, "");
                 });
-
-            builder.Describe("Parts_Title")
-                .OnDisplayed(displayed =>
-                {
-                    var seoTagsPart = _currentContentAccessor.Value.CurrentContentItem.As<SeoTagsPart>();
-                    if (seoTagsPart == null) { return; }
-                    var settings = seoTagsPart.TypePartDefinition.GetSeoTagsPartSettings();
-
-                    if (seoTagsPart != null && string.IsNullOrEmpty(seoTagsPart.Title) == false)
-                    {
-                        _wca.GetContext().Layout.Title = seoTagsPart.Title;
-                    }
-                    else
-                    {
-                        var titleAspect = _currentContentAccessor.Value.CurrentContentItem.As<ITitleAspect>();
-                        if (titleAspect != null && string.IsNullOrEmpty(titleAspect.Title) == false)
-                        {
-                            _wca.GetContext().Layout.Title = titleAspect.Title;
-                        }
-                    }
-
-                    if (settings.AddPageToTitle)
-                    {
-                        var _seoTagsService = _wca.GetContext().Resolve<ISeoTagsService>();
-                        _wca.GetContext().Layout.Title = _seoTagsService.GetTitle(_wca.GetContext().Layout.Title);
-                    }
-                });
-
-            // after that will call displaying title part
-            //builder.Describe("Layout")
-            //    .OnDisplaying(displaying =>
-            //    {
-            //        var seoTagsPart = _currentContentAccessor.Value.CurrentContentItem.As<SeoTagsPart>();
-            //        if (seoTagsPart == null) { return; }
-            //        var settings = seoTagsPart.TypePartDefinition.GetSeoTagsPartSettings();
-
-            //        if (seoTagsPart != null && string.IsNullOrEmpty(seoTagsPart.Title) == false)
-            //        {
-            //            displaying.Shape.Title = seoTagsPart.Title;
-            //        }
-            //        else
-            //        {
-            //            var titleAspect = _currentContentAccessor.Value.CurrentContentItem.As<ITitleAspect>();
-            //            if (titleAspect != null && string.IsNullOrEmpty(titleAspect.Title) == false)
-            //            {
-            //                displaying.Shape.Title = titleAspect.Title;
-            //            }
-            //        }
-
-            //        if (settings.AddPageToTitle)
-            //        {
-            //            var _seoTagsService = _wca.GetContext().Resolve<ISeoTagsService>();
-            //            displaying.Shape.Title = _seoTagsService.GetTitle(displaying.Shape.Title);
-            //        }
-            //    });
         }
     }
 }

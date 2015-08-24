@@ -1,3 +1,6 @@
 ﻿<Placement>
-    <Place Parts_SeoTags_Edit="Content:2.1"/>
+  <Place Parts_SeoTags_Edit="Content:2.1"/>
+  <Match DisplayType="Detail">
+    <Place Parts_SeoTags="Content:10" />
+  </Match>
 </Placement>

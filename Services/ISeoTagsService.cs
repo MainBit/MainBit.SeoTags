@@ -10,6 +10,7 @@ namespace MainBit.SeoTags.Services
             double totalItemCount,
             string pagerId);
 
-        string GetTitle(string title);
+        string GetPageTitle(string title, int pageNumber);
+        string GetPageDescription(string description, int pageNumber);
     }
 }

@@ -1,4 +1,4 @@
-﻿using MainBit.Common.Services;
+﻿using MainBit.Utility.Services;
 using MainBit.SeoTags.Models;
 using Orchard;
 using Orchard.ContentManagement;
@@ -10,6 +10,8 @@ using Orchard.Utility.Extensions;
 using System;
 using System.Linq;
 using MainBit.SeoTags.Settings;
+using MainBit.SeoTags.Services;
+using Orchard.ContentManagement.Aspects;
 
 namespace MainBit.SeoTags.Drivers
 {
@@ -18,15 +20,18 @@ namespace MainBit.SeoTags.Drivers
         private readonly IWorkContextAccessor _wca;
         private readonly ICurrentContentAccessor _currentContentAccessor;
         private readonly IResourceManager _resourceManager;
+        private readonly ISeoTagsService _seoTagsService;
 
         public SeoTagsPartDriver(
-            IWorkContextAccessor workContextAccessor,
+            IWorkContextAccessor wca,
             ICurrentContentAccessor currentContentAccessor,
-            IResourceManager resourceManager)
+            IResourceManager resourceManager,
+            ISeoTagsService seoTagsService)
         {
-            _wca = workContextAccessor;
+            _wca = wca;
             _currentContentAccessor = currentContentAccessor;
             _resourceManager = resourceManager;
+            _seoTagsService = seoTagsService;
             T = NullLocalizer.Instance;
         }
 
@@ -34,86 +39,109 @@ namespace MainBit.SeoTags.Drivers
 
         protected override DriverResult Display(SeoTagsPart part, string displayType, dynamic shapeHelper)
         {
-            if (displayType != "Detail") { return null; }
-            if (_currentContentAccessor.CurrentContentItem.Id != part.ContentItem.Id) { return null; }
+            return ContentShape("Parts_SeoTags", (shape) =>
+            {
+                if (_currentContentAccessor.CurrentContentItem.Id != part.ContentItem.Id) { return null; }
 
-            var settings = part.TypePartDefinition.GetSeoTagsPartSettings();
-            var noindex = false;
-            var pageKey = "page";
-            var queryString = _wca.GetContext().HttpContext.Request.QueryString;
-            int currentPage;
-            if(queryString[pageKey] == null) {
-                currentPage = 0;
-                if (queryString.Count > 0)
+                var workContext = _wca.GetContext();
+                var settings = part.TypePartDefinition.GetSeoTagsPartSettings();
+
+                var noindex = false;
+                var pageKey = "page";
+                var queryString = workContext.HttpContext.Request.QueryString;
+
+                int currentPage = 0;
+
+                // set robots
+                if (queryString[pageKey] == null)
+                {
+                    currentPage = 0;
+                    if (queryString.Count > 0) // contains a non-page parameter
+                    {
+                        noindex = true;
+                    }
+                }
+                else if (!Int32.TryParse(queryString[pageKey], out currentPage) || currentPage <= 0) // contains invalid page parameter
+                {
+                    currentPage = 0;
+                    noindex = true;
+                }
+                else if (queryString.Count > 1) // contains not only a page parameter
                 {
                     noindex = true;
                 }
-            }
-            else if (!Int32.TryParse(queryString[pageKey], out currentPage))
-            {
-                currentPage = 0;
-                noindex = true;
-            }
-            else if (_wca.GetContext().HttpContext.Request.RawUrl.Contains('&'))
-            {
-                noindex = true;
-            }
-
-            if (noindex) {
-                _resourceManager.SetMeta(new MetaEntry
+                if (noindex)
                 {
-                    Name = "robots",
-                    Content = "noindex"
-                });
-            }
-
-            if (!String.IsNullOrWhiteSpace(part.Description))
-            {
-                _resourceManager.SetMeta(new MetaEntry
-                {
-                    Name = "description",
-                    Content = settings.AddPageToTitle && currentPage > 1
-                        ? string.Format(T("{0} Page {1}").ToString(), part.Description, currentPage)
-                        : part.Description
-                });
-            }
-            if (!String.IsNullOrWhiteSpace(part.Keywords))
-            {
-                _resourceManager.SetMeta(new MetaEntry
-                {
-                    Name = "keywords",
-                    Content = part.Keywords,
-                    //Content = settings.AddPageToTitle && currentPage > 1
-                    //    ? string.Format(T("{0} - Page {1}").ToString(), part.Keywords, currentPage)
-                    //    : part.Keywords
-                });
-            }
-
-            var autoroutePart = part.ContentItem.As<Orchard.Autoroute.Models.AutoroutePart>();
-            if (autoroutePart != null && !string.IsNullOrEmpty(autoroutePart.Path))
-            {
-                var canonical = _resourceManager.GetRegisteredLinks().FirstOrDefault(p => p.Rel == "canonical");
-                if (canonical == null)
-                {
-                    canonical = new LinkEntry()
+                    _resourceManager.SetMeta(new MetaEntry
                     {
-                        Rel = "canonical"
-                    };
-                    _resourceManager.RegisterLink(canonical);
+                        Name = "robots",
+                        Content = "noindex"
+                    });
                 }
 
-                if (string.IsNullOrEmpty(part.Canonical))
+                // set title
+                var title = !String.IsNullOrWhiteSpace(part.Title)
+                    ? part.Title
+                    : part.Is<ITitleAspect>()
+                        ? part.As<ITitleAspect>().Title
+                        : null;
+                if (!string.IsNullOrWhiteSpace(title))
                 {
-                    canonical.Href = _wca.GetContext().HttpContext.Request.ToApplicationRootUrlString()
-                         + "/" + autoroutePart.Path;
+                    workContext.Layout.Title = settings.AddPageToTitle
+                            ? _seoTagsService.GetPageTitle(title, currentPage)
+                            : title;
                 }
-                else
+
+                // set description
+                if (!String.IsNullOrWhiteSpace(part.Description))
                 {
-                    canonical.Href = _wca.GetContext().HttpContext.Request.ToApplicationRootUrlString()
-                         + "/" + part.Canonical;
+                    _resourceManager.SetMeta(new MetaEntry
+                    {
+                        Name = "description",
+                        Content = settings.AddPageToTitle
+                            ? _seoTagsService.GetPageDescription(part.Description, currentPage)
+                            : part.Description
+                    });
                 }
-            }
-            return null;
+
+                // set keywords
+                if (!String.IsNullOrWhiteSpace(part.Keywords))
+                {
+                    _resourceManager.SetMeta(new MetaEntry
+                    {
+                        Name = "keywords",
+                        Content = part.Keywords
+                    });
+                }
+
+                // set canonical
+                var autoroutePart = part.As<Orchard.Autoroute.Models.AutoroutePart>();
+                if (autoroutePart != null && !string.IsNullOrEmpty(autoroutePart.Path))
+                {
+                    var canonical = _resourceManager.GetRegisteredLinks().FirstOrDefault(p => p.Rel == "canonical");
+                    if (canonical == null)
+                    {
+                        canonical = new LinkEntry()
+                        {
+                            Rel = "canonical"
+                        };
+                        _resourceManager.RegisterLink(canonical);
+                    }
+
+                    if (string.IsNullOrEmpty(part.Canonical))
+                    {
+                        canonical.Href = _wca.GetContext().HttpContext.Request.ToApplicationRootUrlString()
+                             + "/" + autoroutePart.Path;
+                    }
+                    else
+                    {
+                        canonical.Href = _wca.GetContext().HttpContext.Request.ToApplicationRootUrlString()
+                             + "/" + part.Canonical;
+                    }
+                }
+
+                return null;
+            });
         }
 
         //GET

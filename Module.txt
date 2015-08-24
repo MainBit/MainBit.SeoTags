@@ -3,9 +3,14 @@ Author: neTp9c
 Website: http://mainbit.com
 Version: 1.0
 OrchardVersion: 1.8
-Category: SEO
 Features:
     MainBit.SeoTags:
 		Name: MainBit.SeoTags
-		Description: Title, Keywords, Description, Canonical, Pagging.
-		Dependencies: MainBit.Common, Orchard.Alias, WebAdvanced.Sitemap
+		Description: Provides SEO tags - Title, Keywords, Description, Canonical, Pagging (next, prev).
+		Category: SEO
+		Dependencies: Title, MainBit.Utility
+	MainBit.SeoTags.Sitemap:
+		Name: MainBit.SeoTags.Sitemap
+		Description: Removes non-canonical content items from a sitemap that is builded by WebAdvanced.Sitemap module.
+		Category: SEO
+		Dependencies: WebAdvanced.Sitemap
